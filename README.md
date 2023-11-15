@@ -32,6 +32,7 @@ make LLVM=1 -j$(nproc)
 
 ## 作业二：
 ### 作业内容：关闭默认e1000网卡驱动，修改配置安装myrfy老师的网卡驱动模块demo，并手动配置使得网卡驱动可以联网
+
 修改默认配置并编译内核（编译前需要再次勾选Rust Support，或者使用defconfig保存自定义配置，否则运行脚本将报错无法识别某些rust字符标识）
 ![hw2](/image/hw2/修改默认配置.png)  
 
@@ -55,13 +56,14 @@ ping 10.0.2.2
 ## 作业三：
 ### 作业内容：编译一个in-tree的简单的rust模块
 进入到Linux目录下samples/rust文件夹，添加一个rust_helloworld.rs文件，并添加以下内容
-
+![hw3](/image/hw3/微信图片_20231115211448.png)  
 
 修改samples/rust下的Makefile和Kconfig文件
-
+![hw3](/image/hw3/微信图片_202311152114481.png)  
+![hw3](/image/hw3/微信图片_202311152114482.png)  
 
 在menuconfig配置中将该代码选择[M]以模块编译
-
+![hw3](/image/hw3/微信图片_20231115211604.png)  
 
 修改好所有配置后，重新编译内核与build_image.sh脚本
 安装rust_hellowrold.ko文件，可以看到正确输出 "Hello World from Rust module"
