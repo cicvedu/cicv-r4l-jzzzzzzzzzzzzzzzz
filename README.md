@@ -7,7 +7,7 @@
 # 检查内核rust支持已经启用
 make LLVM=1 rustavailable
 ```
-![hw1](https://github.com/jzzzzzzzzzzzzzzzz/cicv-r4l-jzzzzzzzzzzzzzzzz/master/image/hw1/微信图片_20231115172603.png"开启Rust Support")  
+![hw1](/image/hw1/微信图片_20231115172603.png)  
 
 ## 作业二：
 ##作业三：
