@@ -32,7 +32,26 @@ make LLVM=1 -j$(nproc)
 
 ## 作业二：
 ### 作业内容：关闭默认e1000网卡驱动，修改配置安装myrfy老师的网卡驱动模块demo，并手动配置使得网卡驱动可以联网
-编译内核（编译前需要再次勾选Rust Support，或者使用defconfig保存自定义配置，否则运行脚本将报错无法识别某些rust字符标识）
+修改默认配置并编译内核（编译前需要再次勾选Rust Support，或者使用defconfig保存自定义配置，否则运行脚本将报错无法识别某些rust字符标识）
+![hw2](/image/hw2/微信图片_20231114214805.png)  
+
+重新编译后进去qemu模拟器并手动配置
+```c
+insmod r4l_e1000_demo.ko
+ip link set eth0 up
+ip addr add broadcast 10.0.2.255 dev eth0
+ip addr add 10.0.2.15/255.255.255.0 dev eth0 
+ip route add default via 10.0.2.1
+ping 10.0.2.2
+```
+![hw2](/image/hw2/微信图片_20231114214805.png)  
+![hw2](/image/hw2/微信图片_202311142148051.png)  
+![hw2](/image/hw2/微信图片_202311142148052.png)  
+![hw2](/image/hw2/微信图片_202311142148053.png)  
+
+观察到网卡驱动可以ping通网络
+![hw2](/image/hw2/微信图片_202311142148054.png)  
+
 ## 作业三：
 ### 作业内容：编译Linux内核
 
