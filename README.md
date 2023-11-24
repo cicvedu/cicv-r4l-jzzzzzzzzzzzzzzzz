@@ -77,11 +77,12 @@ ping 10.0.2.2
 ## 作业五：
 ### 作业内容：注册字符设备
 根据刘老师课件完成samples/rust/rust_chrdev.rs中的read和write函数
-![hw5](/image/hw3/微信图片_202311232238232.png)  
+![hw5](/image/hw5/微信图片_202311232238232.png)  
 
-修改配置：选择 [*] 则编译到了vmlinux里面，开机自动运行，通过dmesg可以看到helloworld的输出
+修改配置：选择 [*] 则编译到了vmlinux里面，开机自动运行，通过dmesg可以看到helloworld的输出；
+
 我选择 [M] 编译为模块，生成ko文件，并将其复制至网卡路径下
-![hw5](/image/hw3/微信图片_20231123223823.png)  
+![hw5](/image/hw5/微信图片_20231123223823.png)  
 
 测试完成，成功显示
-![hw5](/image/hw3/微信图片_202311232238231.png)  
+![hw5](/image/hw5/微信图片_202311232238231.png)  
