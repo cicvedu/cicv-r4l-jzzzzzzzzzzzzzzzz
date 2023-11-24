@@ -67,6 +67,7 @@ ping 10.0.2.2
 
 修改好所有配置后，重新编译内核与build_image.sh脚本
 安装rust_hellowrold.ko文件，可以看到正确输出 "Hello World from Rust module"
+
 ![hw3](/image/hw3/微信图片_20231114225044.png)  
 
 
